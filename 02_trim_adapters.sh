@@ -50,7 +50,7 @@ for SAMPLE in $UNIQUE_SAMPLES; do
             echo "$R2_L4" | cut -c 1-"$STOP" >> FASTQ/trimmed/"$SAMPLE_REP"_trimmed_2.fastq
         done
 
-        pigz "$SAMPLE_REP"_trimmed_1.fastq
-        pigz "$SAMPLE_REP"_trimmed_2.fastq
+        pigz FASTQ/trimmed/"$SAMPLE_REP"_trimmed_1.fastq
+        pigz FASTQ/trimmed/"$SAMPLE_REP"_trimmed_2.fastq
     done
 done
